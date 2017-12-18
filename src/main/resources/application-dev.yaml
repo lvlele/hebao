@@ -1,0 +1,34 @@
+server:
+  context-path: /springboot
+  port: 8088
+  connection-timeout: 10
+
+defaultValue: xxx
+demo:
+  configStr: ${defaultValue:abc}
+  listParam: aaa,bbb,ccc
+  mapParam: "{key1: 'value1', key2: 'value2'}"
+common:
+  host: 127.0.0.1
+  port: 6379
+  username: 123
+  list:
+    - aaa
+    - bbb
+    - ccc
+  map:
+    key1: value1
+    key2: value2
+    key3: value3
+
+logging:
+  file: ./springboot.log
+  level:
+    com.hebao.hbservice: info
+
+
+
+
+
+
+

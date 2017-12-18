@@ -1,0 +1,15 @@
+*.class
+# Package Files #
+*.jar
+*.war
+*.ear
+*.iml
+*.ipr
+mvnw
+mvnw.cmd
+/bin
+.*
+!.gitignore
+/web/target
+/web/classes
+/target

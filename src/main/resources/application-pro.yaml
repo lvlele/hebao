@@ -1,0 +1,85 @@
+server:
+  context-path: /springboot
+  port: 8088
+  connection-timeout: 10
+
+logging:
+  file: ./springboot.log
+  level:
+    com.hebao.hbservice: info
+
+spring:
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    timeout: 10000
+
+  datasource:
+    name:
+    url: jdbc:mysql://116.62.116.92:3306/pandorabox
+    username: root
+    password: Kanghua@1234
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.hebao.hbservice.model
+
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+
+
+
+
+
+
+
+
+
+
+
+
+
+#########################测试配置###############################
+defaultValue: xxx
+demo:
+  configStr: ${defaultValue:abc}
+  listParam: aaa,bbb,ccc
+  mapParam: "{key1: 'value1', key2: 'value2'}"
+common:
+  host: 127.0.0.1
+  port: 6379
+  username: 123
+  list:
+    - aaa
+    - bbb
+    - ccc
+  map:
+    key1: value1
+    key2: value2
+    key3: value3
+
+
+
+
+
+
+
+
